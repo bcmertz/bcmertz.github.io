@@ -158,7 +158,7 @@
   var waiting = 0;
 
   var checkEaten = function () {
-    if(waiting.length>0) {
+    if(waiting>0) {
       bodyArr = bodyArr.slice(0, bodyArr.length);
       waiting += -1;
     } else {
