@@ -20,8 +20,9 @@
     <button value=50 id="ludicrous">LUDICROUS</button>
     <button value=20 id="no">no.</button>
     <button value=10 id="y">y thooo</button>
-    <button value=1 id="y">impossible</button>
+    <button value=1 id="impossible">impossible</button>
   </div>
+
   <a href="./pong.html">Play Pong (kind of)!</a>
 
   <script>
@@ -154,14 +155,22 @@
     }
   }
 
+  var waiting = [];
+  
   var checkEaten = function () {
-    if(bodyArr[0][0] === dot[0] && bodyArr[0][1] === dot[1]) {
-      updateDot();
+    if(waiting.length>0) {
       bodyArr = bodyArr.slice(0, bodyArr.length);
-      score += Math.floor(2000/speed);
-      document.getElementById("score").innerHTML = score;
+      waiting.pop();
     } else {
-      bodyArr = bodyArr.slice(0, bodyArr.length-1);
+      if(bodyArr[0][0] === dot[0] && bodyArr[0][1] === dot[1]) {
+        updateDot();
+        waiting = [1,2,3];
+        bodyArr = bodyArr.slice(0, bodyArr.length);
+        score += Math.floor(2000/speed);
+        document.getElementById("score").innerHTML = score;
+      } else {
+        bodyArr = bodyArr.slice(0, bodyArr.length-1);
+      }
     }
   }
 
