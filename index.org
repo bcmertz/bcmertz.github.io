@@ -1,18 +1,32 @@
 #+TITLE: Portfolio
 #+AUTHOR: Bennett Mertz
 
+---
+title: Portfolio
+---
+
 * Indoor Automated Garden
-**
+
 * Linux RICE [[https://github.com/bcmertz/dotfiles][Github]]
   I run an Arch Linux with a completely customized userspace that has tight integration between emacs, terminal, and various unix  utilities
 ** Overview
 ** Custom scripts
-*** language selector and status
-*** backup password and backup packages for reproducibility of build
+*** Internationalization
+*** Backups
+*** Reproducible builds
+
 
 * Open Source Coding Projects
 ** Search Within Video [[https://github.com/bcmertz/videosearch][Github]] [[http://www.searchwithinvideo.com/][Website]]
 ** Ray Tracer [[https://github.com/bcmertz/ray-tracer][Github]]
 ** Steganographic Encoder [[https://github.com/bcmertz/steganographic-encoder][Github]]
+
+
 * Emacs Build [[https://github.com/bcmertz/dotfiles/tree/master/.emacs.d][Github]]
+  Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, autocompletion, compilation, and many tweaks that make windowing inside of emacs work like it does in my window manager of choice i3.
+** Measuring startup time
+** Emacs as window manager
+** Latex dev environment and resume
+
+
 * Ginger Beer

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-11-22 Sun 16:53 -->
+<!-- 2020-11-22 Sun 17:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portfolio</title>
@@ -215,6 +215,28 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -223,86 +245,92 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org5ef2045">1. Indoor Automated Garden</a></li>
-<li><a href="#org608930f">2. Linux RICE Github</a>
+<li><a href="#org5bd0fc4">1. Indoor Automated Garden</a></li>
+<li><a href="#org2760f51">2. Linux RICE Github</a>
 <ul>
-<li><a href="#org217c7e7">2.1. Overview</a></li>
-<li><a href="#orgc8ed436">2.2. Custom scripts</a>
+<li><a href="#org5c5ac80">2.1. Overview</a></li>
+<li><a href="#orgf62ac82">2.2. Custom scripts</a>
 <ul>
-<li><a href="#org0467b39">2.2.1. language selector and status</a></li>
-<li><a href="#org7f1520e">2.2.2. backup password and backup packages for reproducibility of build</a></li>
+<li><a href="#orgc44ece9">2.2.1. Internationalization</a></li>
+<li><a href="#orgd686831">2.2.2. Backups</a></li>
+<li><a href="#orgf1e7403">2.2.3. Reproducible builds</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgb1944b2">3. Open Source Coding Projects</a>
+<li><a href="#org0cecb77">3. Open Source Coding Projects</a>
 <ul>
-<li><a href="#org1b6416e">3.1. Search Within Video Github Website</a></li>
-<li><a href="#org7a68c9c">3.2. Ray Tracer Github</a></li>
-<li><a href="#org95d38cd">3.3. Steganographic Encoder Github</a></li>
+<li><a href="#org3c91639">3.1. Search Within Video Github Website</a></li>
+<li><a href="#orgb425348">3.2. Ray Tracer Github</a></li>
+<li><a href="#org6404d75">3.3. Steganographic Encoder Github</a></li>
 </ul>
 </li>
-<li><a href="#org1f267e2">4. Emacs Build Github</a></li>
-<li><a href="#orgb5d1a7e">5. Ginger Beer</a></li>
+<li><a href="#orgc37822e">4. Emacs Build Github</a></li>
+<li><a href="#org008e1b8">5. Ginger Beer</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5ef2045" class="outline-2">
-<h2 id="org5ef2045"><span class="section-number-2">1</span> Indoor Automated Garden</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-**
-</p>
+<div id="outline-container-org5bd0fc4" class="outline-2">
+<h2 id="org5bd0fc4"><span class="section-number-2">1</span> Indoor Automated Garden</h2>
 </div>
-</div>
-<div id="outline-container-org608930f" class="outline-2">
-<h2 id="org608930f"><span class="section-number-2">2</span> Linux RICE <a href="https://github.com/bcmertz/dotfiles">Github</a></h2>
+<div id="outline-container-org2760f51" class="outline-2">
+<h2 id="org2760f51"><span class="section-number-2">2</span> Linux RICE <a href="https://github.com/bcmertz/dotfiles">Github</a></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 I run an Arch Linux with a completely customized userspace that has tight integration between emacs, terminal, and various unix  utilities
 </p>
 </div>
-<div id="outline-container-org217c7e7" class="outline-3">
-<h3 id="org217c7e7"><span class="section-number-3">2.1</span> Overview</h3>
+<div id="outline-container-org5c5ac80" class="outline-3">
+<h3 id="org5c5ac80"><span class="section-number-3">2.1</span> Overview</h3>
 </div>
-<div id="outline-container-orgc8ed436" class="outline-3">
-<h3 id="orgc8ed436"><span class="section-number-3">2.2</span> Custom scripts</h3>
+<div id="outline-container-orgf62ac82" class="outline-3">
+<h3 id="orgf62ac82"><span class="section-number-3">2.2</span> Custom scripts</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-org0467b39" class="outline-4">
-<h4 id="org0467b39"><span class="section-number-4">2.2.1</span> language selector and status</h4>
+<div id="outline-container-orgc44ece9" class="outline-4">
+<h4 id="orgc44ece9"><span class="section-number-4">2.2.1</span> Internationalization</h4>
 </div>
-<div id="outline-container-org7f1520e" class="outline-4">
-<h4 id="org7f1520e"><span class="section-number-4">2.2.2</span> backup password and backup packages for reproducibility of build</h4>
+<div id="outline-container-orgd686831" class="outline-4">
+<h4 id="orgd686831"><span class="section-number-4">2.2.2</span> Backups</h4>
+</div>
+<div id="outline-container-orgf1e7403" class="outline-4">
+<h4 id="orgf1e7403"><span class="section-number-4">2.2.3</span> Reproducible builds</h4>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb1944b2" class="outline-2">
-<h2 id="orgb1944b2"><span class="section-number-2">3</span> Open Source Coding Projects</h2>
+<div id="outline-container-org0cecb77" class="outline-2">
+<h2 id="org0cecb77"><span class="section-number-2">3</span> Open Source Coding Projects</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org1b6416e" class="outline-3">
-<h3 id="org1b6416e"><span class="section-number-3">3.1</span> Search Within Video <a href="https://github.com/bcmertz/videosearch">Github</a> <a href="http://www.searchwithinvideo.com/">Website</a></h3>
+<div id="outline-container-org3c91639" class="outline-3">
+<h3 id="org3c91639"><span class="section-number-3">3.1</span> Search Within Video <a href="https://github.com/bcmertz/videosearch">Github</a> <a href="http://www.searchwithinvideo.com/">Website</a></h3>
 </div>
-<div id="outline-container-org7a68c9c" class="outline-3">
-<h3 id="org7a68c9c"><span class="section-number-3">3.2</span> Ray Tracer <a href="https://github.com/bcmertz/ray-tracer">Github</a></h3>
+<div id="outline-container-orgb425348" class="outline-3">
+<h3 id="orgb425348"><span class="section-number-3">3.2</span> Ray Tracer <a href="https://github.com/bcmertz/ray-tracer">Github</a></h3>
 </div>
-<div id="outline-container-org95d38cd" class="outline-3">
-<h3 id="org95d38cd"><span class="section-number-3">3.3</span> Steganographic Encoder <a href="https://github.com/bcmertz/steganographic-encoder">Github</a></h3>
+<div id="outline-container-org6404d75" class="outline-3">
+<h3 id="org6404d75"><span class="section-number-3">3.3</span> Steganographic Encoder <a href="https://github.com/bcmertz/steganographic-encoder">Github</a></h3>
 </div>
 </div>
-<div id="outline-container-org1f267e2" class="outline-2">
-<h2 id="org1f267e2"><span class="section-number-2">4</span> Emacs Build <a href="https://github.com/bcmertz/dotfiles/tree/master/.emacs.d">Github</a></h2>
+<div id="outline-container-orgc37822e" class="outline-2">
+<h2 id="orgc37822e"><span class="section-number-2">4</span> Emacs Build <a href="https://github.com/bcmertz/dotfiles/tree/master/.emacs.d">Github</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Emacs is the ideal extensible editor for all types of plain text, including code and \(latex\).
+</p>
 </div>
-<div id="outline-container-orgb5d1a7e" class="outline-2">
-<h2 id="orgb5d1a7e"><span class="section-number-2">5</span> Ginger Beer</h2>
+</div>
+
+
+<div id="outline-container-org008e1b8" class="outline-2">
+<h2 id="org008e1b8"><span class="section-number-2">5</span> Ginger Beer</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Bennett Mertz</p>
-<p class="date">Created: 2020-11-22 Sun 16:53</p>
+<p class="date">Created: 2020-11-22 Sun 17:42</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
