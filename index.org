@@ -1,9 +1,18 @@
 #+TITLE: Portfolio
 #+AUTHOR: Bennett Mertz
 
-* Portfolio Header 1
-  test 1
-** this is a subheader
-   test 2
-* Portfolio Header 2
-  test 3
+* Indoor Automated Garden
+**
+* Linux RICE [[https://github.com/bcmertz/dotfiles][Github]]
+  I run an Arch Linux with a completely customized userspace that has tight integration between emacs, terminal, and various unix  utilities
+** Overview
+** Custom scripts
+*** language selector and status
+*** backup password and backup packages for reproducibility of build
+
+* Open Source Coding Projects
+** Search Within Video [[https://github.com/bcmertz/videosearch][Github]] [[http://www.searchwithinvideo.com/][Website]]
+** Ray Tracer [[https://github.com/bcmertz/ray-tracer][Github]]
+** Steganographic Encoder [[https://github.com/bcmertz/steganographic-encoder][Github]]
+* Emacs Build [[https://github.com/bcmertz/dotfiles/tree/master/.emacs.d][Github]]
+* Ginger Beer
