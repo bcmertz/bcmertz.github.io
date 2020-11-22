@@ -2,7 +2,9 @@
 #+AUTHOR: Bennett Mertz
 
 * Indoor Automated Garden
-  A year ago I moved into my friends' childhood home in the Bronx
+  A year ago I my best friend's mom passed away. My friend had already moved out on her own, but wanted to hold onto her childhood apartment. So a year ago I moved into the Bronx after graduating from Recurse Center and college, so that she could keep her apartment in her name. I needed to reside in the city for my transgender services at Mount Sinai and brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
+
+
 * Linux RICE [[https://github.com/bcmertz/dotfiles][(Github)]]
   I run an Arch Linux with a completely customized userspace that has tight integration between emacs, terminal, and various unix  utilities
 ** Overview
@@ -11,18 +13,23 @@
 *** Backups
 *** Reproducible builds
 
-
 * Open Source Coding Projects
+  Open source is incredibly important to me, and I make every piece of software I write open souce and freely liscenced. Below are three of my favorite projects I've written over the last few years.
 ** Search Within Video ([[https://github.com/bcmertz/videosearch][Github]] [[http://www.searchwithinvideo.com/][Website]])
+   Search Within Video allows you to upload a video or provide a youtube url that is downloaded and analyzed using OpenCV to see which frames are statistically most unique. These frames are then uploaded to an open source image classifier, and the results are returned to the user in the form of a searchable video. The user can search for an object such as "Dog" and the video will load the timestamp of any dog occurence.
+
+   This project has a microservice architecture and runs the video parser and image classifier on a python backend and the webpage off a node server.
 ** Ray Tracer ([[https://github.com/bcmertz/ray-tracer][Github]])
 ** Steganographic Encoder ([[https://github.com/bcmertz/steganographic-encoder][Github]])
-
-
 * Emacs Build ([[https://github.com/bcmertz/dotfiles/tree/master/.emacs.d][Github]])
-  Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, autocompletion, compilation, and many tweaks that make windowing inside of emacs work like it does in my window manager of choice i3.
+  Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, autocompletion, compilation, and many tweaks that make windowing inside of emacs work like it does in my window manager of choice i3. My custom build features 8 language configurations and 14 general purpose modules that configure everything from git support to editing
 ** Measuring startup time
+   Startup performance of my custom build is monitored very closely. [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/init.el#L22-L27][Here]] I implement a module timer to track perfomance / load time of each custom module.
 ** Emacs as window manager
+   Emacs is very nearly an entire OS in it's own right. I use it as my window manager while programming for a distraction free environment tightly configured with multi-language integration.
+** Org Mode
+   This portfolio is written in an org document and exported to html, to see the original org text go [[https://github.com/bcmertz/bcmertz.github.io/blob/master/index.org][here]]
+
+   I use org mode to track my list of todo items, and have built in functionality like reviewing github pull requests from inside of emacs/org-mode as configured [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-org.el#L11-L18][here]]
 ** Latex dev environment and resume
-
-
-* Ginger Beer
+   Within emacs I have setup a dev environment for editing [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-latex.el][latex]] with automatic compilation to pdf. Checkout my [[https://github.com/bcmertz/resume/blob/master/resume.pdf][resume]] written in Latex.
