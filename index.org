@@ -1,10 +1,6 @@
 #+TITLE: Portfolio
 #+AUTHOR: Bennett Mertz
 
----
-title: Portfolio
----
-
 * Indoor Automated Garden
 
 * Linux RICE [[https://github.com/bcmertz/dotfiles][Github]]
