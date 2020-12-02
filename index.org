@@ -3,12 +3,26 @@
 
 * Indoor Automated Garden
   A year ago I my best friend's mom passed away. My friend had already moved out on her own, but wanted to hold onto her childhood apartment. So a year ago I moved into the Bronx after graduating from Recurse Center and college, so that she could keep her apartment in her name. I needed to reside in the city for my transgender services at Mount Sinai and brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
+#+ATTR_HTML: width="100px"
+#+ATTR_ORG: :width 100
 [[./public/begining.JPG]]
+#+ATTR_HTML: width="100px"
+#+ATTR_ORG: :width 100
 [[./public/automatedlights.JPG]]
+#+ATTR_HTML: width="100px"
+#+ATTR_ORG: :width 100
 [[./public/bellpepper.JPG]]
+#+ATTR_HTML: width="100px"
+#+ATTR_ORG: :width 100
 [[./public/constructingwatering1.JPG]]
+#+ATTR_HTML: width="100px"
+#+ATTR_ORG: :width 100
 [[./public/constructingwatering2.JPG]]
+#+ATTR_HTML: width="100px"
+#+ATTR_ORG: :width 100
 [[./public/graftedmulberry.JPG]]
+#+ATTR_HTML: width="100px"
+#+ATTR_ORG: :width 100
 [[./public/mulberry.JPG]]
 
 * Linux RICE [[https://github.com/bcmertz/dotfiles][(Github)]]
@@ -27,10 +41,14 @@
 
    This project has a microservice architecture and runs the video parser and image classifier on a python backend and the webpage off a node server.
 ** Ray Tracer ([[https://github.com/bcmertz/ray-tracer][Github]])
+   #+ATTR_HTML: width="100px"
+   #+ATTR_ORG: :width 100
    [[./public/ray-tracer.ppm]]
 ** Steganographic Encoder ([[https://github.com/bcmertz/steganographic-encoder][Github]])
 * Emacs Build ([[https://github.com/bcmertz/dotfiles/tree/master/.emacs.d][Github]])
   Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, autocompletion, compilation, and many tweaks that make windowing inside of emacs work like it does in my window manager of choice i3. My custom build features 8 language configurations and 14 general purpose modules that configure everything from git support to editing
+  #+ATTR_HTML: width="100px"
+  #+ATTR_ORG: :width 100
   [[./public/emacs-org-mode.png]]
 ** Measuring startup time
    Startup performance of my custom build is monitored very closely. [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/init.el#L22-L27][Here]] I implement a module timer to track perfomance / load time of each custom module.
@@ -62,4 +80,6 @@
    I use org mode to track my list of todo items, and have built in functionality like reviewing github pull requests from inside of emacs/org-mode as configured [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-org.el#L11-L18][here]]
 ** Latex dev environment and resume
    Within emacs I have setup a dev environment for editing [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-latex.el][latex]] with automatic compilation to pdf. Checkout my [[https://github.com/bcmertz/resume/blob/master/resume.pdf][resume]] written in Latex.
+   #+ATTR_HTML: width="100px"
+   #+ATTR_ORG: :width 100
    [[./public/emacs-resume.png]]
