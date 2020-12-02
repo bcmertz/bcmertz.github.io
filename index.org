@@ -3,8 +3,6 @@
 
 * Indoor Automated Garden
   A year ago I my best friend's mom passed away. My friend had already moved out on her own, but wanted to hold onto her childhood apartment. So a year ago I moved into the Bronx after graduating from Recurse Center and college, so that she could keep her apartment in her name. I needed to reside in the city for my transgender services at Mount Sinai and brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
-
-
 * Linux RICE [[https://github.com/bcmertz/dotfiles][(Github)]]
   I run an Arch Linux with a completely customized userspace that has tight integration between emacs, terminal, and various unix  utilities
 ** Overview
