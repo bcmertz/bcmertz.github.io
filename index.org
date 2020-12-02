@@ -3,8 +3,17 @@
 
 * Indoor Automated Garden
   A year ago I my best friend's mom passed away. My friend had already moved out on her own, but wanted to hold onto her childhood apartment. So a year ago I moved into the Bronx after graduating from Recurse Center and college, so that she could keep her apartment in her name. I needed to reside in the city for my transgender services at Mount Sinai and brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
+[[./public/begining.JPG]]
+[[./public/automatedlights.JPG]]
+[[./public/bellpepper.JPG]]
+[[./public/constructingwatering1.JPG]]
+[[./public/constructingwatering2.JPG]]
+[[./public/graftedmulberry.JPG]]
+[[./public/mulberry.JPG]]
+
 * Linux RICE [[https://github.com/bcmertz/dotfiles][(Github)]]
   I run an Arch Linux with a completely customized userspace that has tight integration between emacs, terminal, and various unix  utilities
+  [[./public/rice.png]]
 ** Overview
 ** Custom scripts
 *** Internationalization
@@ -18,16 +27,39 @@
 
    This project has a microservice architecture and runs the video parser and image classifier on a python backend and the webpage off a node server.
 ** Ray Tracer ([[https://github.com/bcmertz/ray-tracer][Github]])
+   [[./public/ray-tracer.ppm]]
 ** Steganographic Encoder ([[https://github.com/bcmertz/steganographic-encoder][Github]])
 * Emacs Build ([[https://github.com/bcmertz/dotfiles/tree/master/.emacs.d][Github]])
   Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, autocompletion, compilation, and many tweaks that make windowing inside of emacs work like it does in my window manager of choice i3. My custom build features 8 language configurations and 14 general purpose modules that configure everything from git support to editing
+  [[./public/emacs-org-mode.png]]
 ** Measuring startup time
    Startup performance of my custom build is monitored very closely. [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/init.el#L22-L27][Here]] I implement a module timer to track perfomance / load time of each custom module.
+   #+BEGIN_SRC emacs-lisp
+   ;; debug startup performance / load time using (measure-time(load "custom-module.el"))
+(defmacro measure-time (&rest body)
+  "Measure the time it takes to evaluate BODY."
+  `(let ((time (current-time)))
+     ,@body
+     (message "%.06f" (float-time (time-since time)))))
+#+END_SRC
+
 ** Emacs as window manager
    Emacs is very nearly an entire OS in it's own right. I use it as my window manager while programming for a distraction free environment tightly configured with multi-language integration.
+   #+BEGIN_SRC emacs-lisp
+;; emacs as window manager
+(setq session (getenv "SESSION"))
+(if (equal session "emacs")
+    (progn
+      (message "managing windows")
+      (load "custom-exwm-config.el")
+      )
+  )
+#+END_SRC
+
 ** Org Mode
    This portfolio is written in an org document and exported to html, to see the original org text go [[https://github.com/bcmertz/bcmertz.github.io/blob/master/index.org][here]]
 
    I use org mode to track my list of todo items, and have built in functionality like reviewing github pull requests from inside of emacs/org-mode as configured [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-org.el#L11-L18][here]]
 ** Latex dev environment and resume
    Within emacs I have setup a dev environment for editing [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-latex.el][latex]] with automatic compilation to pdf. Checkout my [[https://github.com/bcmertz/resume/blob/master/resume.pdf][resume]] written in Latex.
+   [[./public/emacs-resume.png]]
