@@ -20,7 +20,7 @@ Next I added in watering, using an old paint bucket and a step drill bit I fit a
 Pictured are my two black mulberry cuttings which sent out roots :)
 [[./public/graftedmulberry.JPG]]
 
-Here is my white mulberry grown from seeds taken on my street, just like in Iran!
+Here is my white mulberry grown from seeds taken on my street, white mullberries are grown natively throughout the middle east but are new here!
 [[./public/mulberry.JPG]]
 
 * Linux RICE [[https://github.com/bcmertz/dotfiles][(Github)]]
