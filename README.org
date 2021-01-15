@@ -2,3 +2,7 @@
 #+AUTHOR: Bennett Mertz
 
 This is my portfolio of projects and work
+
+Export to html with ~C-c C-e~ and add ~---
+layout: default
+---~ to the top
