@@ -3,6 +3,12 @@
 
 This is my portfolio of projects and work
 
-Export to html with ~C-c C-e~ and add ~---
+Export to html with ~C-c C-e~ and add
+
+#+BEGIN_SRC
+---
 layout: default
----~ to the top
+---
+#+END_SRC
+
+to the top
