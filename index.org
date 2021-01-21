@@ -41,7 +41,7 @@ Here is my white mulberry grown from seeds taken on my street, white mullberries
 ** Search Within Video ([[https://github.com/bcmertz/videosearch][Github]] [[http://www.searchwithinvideo.com/][Website]])
    Search Within Video allows you to upload a video or provide a youtube url that is downloaded and analyzed using OpenCV to see which frames are statistically most unique based off of mean squared error comparisons to the previous frame. These unique frames are then uploaded to an open source image classifier, and the results are returned to the user in the form of a searchable video. The user can search for an object such as "dog" and the video will load the timestamp of any dog occurence.
 
-   [[./public/videosearch.mp4]]
+   [[file:public/videosearch.mp4][Demo]]
 
    This project has a microservice architecture and runs the video parser and image classifier on a python backend and the webpage off a node server.
 ** Ray Tracer ([[https://github.com/bcmertz/ray-tracer][Github]])
