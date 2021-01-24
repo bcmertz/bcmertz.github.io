@@ -64,7 +64,7 @@ Here is my white mulberry grown from seeds taken on my street, white mullberries
 #+END_SRC
 ** Email
    I setup emacs as an email client using https://github.com/cemkeylan/mu-wizard/ to set up mu4e! I am still amazed this works.
-   [[./public/mu4e.png/]]
+   [[./public/mu4e.png]]
 ** Emacs as window manager
    Emacs is very nearly an entire OS in it's own right. I use it as my window manager while programming for a distraction free environment tightly configured with multi-language integration. Here we load the emacs x window manager (exwm) config:
    #+BEGIN_SRC emacs-lisp
