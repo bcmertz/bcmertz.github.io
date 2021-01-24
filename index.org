@@ -14,10 +14,62 @@ Soon I added in an arduino controlled relay (in the box) to turn the lights on a
 A bell pepper coming in! By this point I added in a rtc_ds1307 real time clock to keep a battery powered time store that wouldn't reset in the case of power failures as the simple arduino program I wrote would.
 [[./public/bellpepper.JPG]]
 
+Here is the janky c code I settled on :)
+#+BEGIN_SRC c
+// Date and time functions using a DS1307 RTC connected via I2C and Wire lib
+#include <Wire.h>
+#include "RTClib.h"
+RTC_DS1307 rtc;
+
+// constants won't change. Used here to set a pin number:
+const int relay =  2;
+
+// start light off
+int ledState = HIGH;
+
+// t1 on
+int h1 = 7;
+// t2 off
+int h2 = 22;
+
+void setup () {
+  while (!Serial); // for Leonardo/Micro/Zero
+  Serial.begin(9600);
+  delay(3000);
+  if (! rtc.begin()) {
+    Serial.println("Couldn't find RTC");
+    while (1);
+  }
+  // following line sets the RTC to the date & time this sketch was compiled
+  // uncomment to set new date time
+  // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+
+  digitalWrite(relay, LOW);
+  pinMode(relay, OUTPUT);
+}
+void loop () {
+  DateTime now = rtc.now();
+  Serial.println(now.hour());
+  Serial.println(now.minute());
+  Serial.println(ledState ? "HIGH" : "LOW");
+  if (now.hour() >= h1 && ledState == HIGH && now.hour() < h2) {
+    // if the LED is off turn it on
+    Serial.println("Switching light on");
+    ledState = LOW;
+  } else if ((now.hour() >= h2 || now.hour() < h1) && ledState == LOW) {
+    Serial.println("Switching light off");
+    ledState = HIGH;
+  }
+  // set the LED with the ledState of the variable:
+  digitalWrite(relay, ledState);
+  delay(3000);
+}
+#+END_SRC
+
 Next I added in gravity fed drip irrigation, using an old paint bucket and a step drill bit I fit a hose connector to the bucket. This proved to be leaky and was eventually replaced with a proper gasget and valve. Water is fed into the bucket, then goes down main line then enters the drip line and leaves the emitters at 0.5 Gal / hour.
 [[./public/constructingwatering1.JPG]]
 
-Pictured are my two black mulberry cuttings which sent out roots :)
+Pictured are my two black mulberry cuttings which sent out roots, and the blue drip emitters
 [[./public/graftedmulberry.JPG]]
 
 Here is my white mulberry grown from seeds taken on my street, white mullberries are grown natively throughout the middle east but are new here!
