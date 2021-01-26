@@ -1,8 +1,7 @@
 #+TITLE: Portfolio
 #+AUTHOR: Bennett Mertz
 * Indoor Automated Garden
-  A year ago my best friend's mom passed away. My friend had already moved out on her own, but wanted to hold onto her childhood apartment. So I moved into the Bronx after graduating from Recurse Center and college, so that she could keep her apartment in her name. I wanted to have a garden but needed to reside in the city for my transgender services at Mount Sinai and brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
-
+  In 2018 after completing the Recurse center I moved to the Bronx to help a friend keep her childhood apartment in her name. I have alwayds wanted to have a garden but I needed to reside in the city for my transgender services at Mount Sinai. So I brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
 
   My garden started humbly with some led grow lights and two little ghost pepper plants. I took the last shelf off my book shelf and hung the lights.
 [[./public/begining.JPG]]
