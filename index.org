@@ -1,16 +1,16 @@
 #+TITLE: Portfolio
 #+AUTHOR: Bennett Mertz
 * Indoor Automated Garden
-  In 2018 after completing the Recurse center I moved to the Bronx to help a friend keep her childhood apartment in her name. I have alwayds wanted to have a garden but I needed to reside in the city for my transgender services at Mount Sinai. So I brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
+  In 2018 after completing the Recurse center I moved to the Bronx to help a friend keep her childhood apartment in her name. I have always wanted to have a garden but I needed to reside in the city for my transgender services at Mount Sinai. So I brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
 
   My garden started humbly with some led grow lights and two little ghost pepper plants. I took the last shelf off my book shelf and hung the lights.
 [[./public/begining.JPG]]
 
-Soon I added in an arduino controlled relay (in the box) to turn the lights on and off at set times each day. The program controlling it was simply doing a delay() for 12 hours. Not the most robust system, and it reset the program timer anytime the power reset, which was frequent with storms and sloppy cord management :)
+Soon I added in an Arduino controlled relay (in the box) to turn the lights on and off at set times each day. The program controlling it was simply doing a delay() for 12 hours. Not the most robust system, and it reset the program timer anytime the power reset, which was frequent with storms and sloppy cord management :)
 [[./public/automatedlights.JPG]]
 
 
-A bell pepper coming in! By this point I added in a rtc_ds1307 real time clock to keep a battery powered time store that wouldn't reset in the case of power failures as the simple arduino program I wrote would.
+A bell pepper coming in! By this point I added in a rtc_ds1307 real time clock to keep a battery powered time store that wouldn't reset in the case of power failures as the simple Arduino program I wrote would.
 [[./public/bellpepper.JPG]]
 
 Here is the janky c code I settled on :)
@@ -65,47 +65,47 @@ void loop () {
 }
 #+END_SRC
 
-Next I added in gravity fed drip irrigation, using an old paint bucket and a step drill bit I fit a hose connector to the bucket. This proved to be leaky and was eventually replaced with a proper gasget and valve. Water is fed into the bucket, then goes down main line then enters the drip line and leaves the emitters at 0.5 Gal / hour.
+Next I added in gravity fed drip irrigation, using an old paint bucket and a step drill bit I fit a hose connector to the bucket. This proved to be leaky and was eventually replaced with a proper gasket and valve. Water is fed into the bucket, then goes down main line then enters the drip line and leaves the emitters at 0.5 Gal / hour.
 [[./public/constructingwatering1.JPG]]
 
 Pictured are my two black mulberry cuttings which sent out roots, and the blue drip emitters
 [[./public/graftedmulberry.JPG]]
 
-Here is my white mulberry grown from seeds taken on my street, white mullberries are grown natively throughout the middle east but are new here!
+Here is my white mulberry grown from seeds taken on my street, white mulberries are grown natively throughout the middle east but are new here!
 [[./public/mulberry.JPG]]
 
 * Linux RICE [[https://github.com/bcmertz/dotfiles][(Github)]]
-  I run Arch Linux with a completely customized userspace that has tight integration and command keystroke parity between emacs, terminal, and various unix utilities. Pictured below is my i3 wm setup
+  I run Arch Linux with a completely customized user-space that has tight integration and command keystroke parity between Emacs, terminal, and various Unix utilities. Pictured below is my i3 WM setup
   [[./public/rice.png]]
 ** Overview
    These are some interesting scripts I've written to make my desktop tick, and sometimes fly:
-   - [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/dmenu/choose_keyboard][Internationalization]] - this script queries the installed keyboards and sets a toggle-able keyboard with the default en keyboard, and [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/dmenu/farsi_text][this]] script allows the user to search by phoenetic sound to see which farsi letters represent that sound, and the keyboard mappings which type that character (useful when you only have an english keyboard as I do). This makes typing farsi on an english keyboard introspectable and efficient.
+   - [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/dmenu/choose_keyboard][Internationalization]] - this script queries the installed keyboards and sets a toggle-able keyboard with the default en keyboard, and [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/dmenu/farsi_text][this]] script allows the user to search by phonetic sound to see which Farsi letters represent that sound, and the keyboard mappings which type that character (useful when you only have an English keyboard as I do). This makes typing Farsi on an English keyboard introspect-able and efficient.
 [[./public/internationalization.png]]
    - [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/wmsel][Simple Display Manger]] I wrote in bash, which is used [[https://github.com/bcmertz/dotfiles/blob/master/.profile#L26-L36][here]] to choose the window manager on login. The second part of this process is done [[https://github.com/bcmertz/dotfiles/blob/master/.xinitrc#L31-L44][here]], where we take the name of window manager and get its startup command from ~/usr/share/xsessions/$session.desktop~
    - [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/cron/setbg][Set Background]] - this script is run as a cron job to change the wallpaper every hour to a random wallpaper. If invoked manually you can pass the -s flag to keep the wallpaper the same. Additionally you can pass a wallpaper name to choose specifically which wallpaper is desired.
    - [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/setup/backuppass][Pzasswords & GPG Keys]] - this script backs up encrypted passwords and GPG keys and [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/setup/setuppass][this script]] clones them to a new/broken machine
-   - [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/killport][Kill Port utility]] - to kill whatever process is runnign on a specific port. Very useful when node bugs out
+   - [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/killport][Kill Port utility]] - to kill whatever process is running on a specific port. Very useful when node bugs out
    - [[https://github.com/bcmertz/dotfiles/blob/master/.local/bin/git_alias][Git alias]] - this utility allows me to use git commands in my home folder as it is version controlled as a bare git repository. This means all my dotfiles are always version controlled without any fancy scripts or tools, just git
    - [[https://github.com/bcmertz/dotfiles/blob/master/.xprofile][Startup applications]]: this runs when Xorg starts up and checks to see which DE/WM is being used and starts the appropriate applications
 
 * Open Source Coding Projects
-  Open source is incredibly important to me, and I make every piece of software I write open souce and freely liscenced. Below are three of my favorite projects I've written over the last few years.
+  Open source is incredibly important to me, and I make every piece of software I write open source and freely licensed. Below are three of my favorite projects I've written over the last few years.
 ** Search Within Video ([[https://github.com/bcmertz/videosearch][Github]] [[http://www.searchwithinvideo.com/][Website]])
-   Search Within Video allows you to upload a video or provide a youtube url that is downloaded and analyzed using OpenCV to see which frames are statistically most unique based off of mean squared error comparisons to the previous frame. These unique frames are then uploaded to an open source image classifier, and the results are returned to the user in the form of a searchable video. The user can search for an object such as "dog" and the video will load the timestamp of any dog occurence.
+   Search Within Video allows you to upload a video or provide a Youtube URL that is downloaded and analyzed using OpenCV to see which frames are statistically most unique based off of mean squared error comparisons to the previous frame. These unique frames are then uploaded to an open source image classifier, and the results are returned to the user in the form of a searchable video. The user can search for an object such as "dog" and the video will load the timestamp of any dog occurrence.
 
    [[file:public/videosearch.mp4][Demo]]
 
-   This project has a microservice architecture and runs the video parser and image classifier on a python backend and the webpage off a node server.
+   This project has a micro-service architecture and runs the video parser and image classifier on a python back-end and the web page off a node server.
 ** Ray Tracer ([[https://github.com/bcmertz/ray-tracer][Github]])
    Pictured below is the sample output from my ray tracer. It can render shapes at different depths, with variable lighting and backgrounds. Shadows don't work properly but there should be support soon.
    [[./public/ray-tracer.png]]
 ** Steganographic Encoder ([[https://github.com/bcmertz/steganographic-encoder][Github]])
    This project somewhat sloppily hides messages and decodes them from pictures using least significant bit manipulation.
 * Emacs Build ([[https://github.com/bcmertz/dotfiles/tree/master/.emacs.d][Github]])
-  Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, autocompletion, compilation, and many tweaks that make windowing inside of emacs work like it does in my window manager of choice i3. My custom build features 8 language configurations and 14 general purpose modules that configure everything from git support to editing
+  Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, auto-completion, compilation, and many tweaks that make windowing inside of Emacs work like it does in my window manager of choice i3. My custom build features 8 language configurations and 14 general purpose modules that configure everything from git support to editing
   [[./public/emacs-org-mode.png]]
 ** Measuring startup time
-   Startup performance of my custom build is monitored very closely. [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/init.el#L22-L27][Here]] I implement a module timer to track perfomance / load time of each custom module.
+   Startup performance of my custom build is monitored very closely. [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/init.el#L22-L27][Here]] I implement a module timer to track performance / load time of each custom module.
    #+BEGIN_SRC emacs-lisp
    ;; debug startup performance / load time using (measure-time(load "custom-module.el"))
 (defmacro measure-time (&rest body)
@@ -115,10 +115,10 @@ Here is my white mulberry grown from seeds taken on my street, white mullberries
      (message "%.06f" (float-time (time-since time)))))
 #+END_SRC
 ** Email
-   I setup emacs as an email client using https://github.com/cemkeylan/mu-wizard/ to set up mu4e! I am still amazed this works.
+   I setup Emacs as an email client using https://github.com/cemkeylan/mu-wizard/ to set up mu4e! I am still amazed this works.
    [[./public/mu4e.png]]
 ** Emacs as window manager
-   Emacs is very nearly an entire OS in it's own right. I use it as my window manager while programming for a distraction free environment tightly configured with multi-language integration. Here we load the emacs x window manager (exwm) config:
+   Emacs is very nearly an entire OS in it's own right. I use it as my window manager while programming for a distraction free environment tightly configured with multi-language integration. Here we load the Emacs x window manager (EXWM) config:
    #+BEGIN_SRC emacs-lisp
      ;; emacs as window manager
      (setq session (getenv "SESSION"))
@@ -131,9 +131,9 @@ Here is my white mulberry grown from seeds taken on my street, white mullberries
 #+END_SRC
 
 ** Org Mode
-   This portfolio is written in an org document and exported to html, to see the original org text go [[https://github.com/bcmertz/bcmertz.github.io/blob/master/index.org][here]]
+   This portfolio is written in an org document and exported to HTML, to see the original org text go [[https://github.com/bcmertz/bcmertz.github.io/blob/master/index.org][here]]
 
-   I use org mode to track my list of todo items, and have built in functionality like reviewing github pull requests from inside of emacs/org-mode as configured [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-org.el#L11-L18][here]]
+   I use org mode to track my list of todo items, and have built in functionality like reviewing Github pull requests from inside of Emacs/org-mode as configured [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-org.el#L11-L18][here]]
 ** Latex dev environment and resume
-   Within emacs I have setup a dev environment for editing [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-latex.el][latex]] with automatic compilation to pdf. Checkout my [[https://github.com/bcmertz/resume/blob/master/resume.pdf][resume]] written in Latex.
+   Within Emacs I have setup a dev environment for editing [[https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-latex.el][latex]] with automatic compilation to PDF. Checkout my [[https://github.com/bcmertz/resume/blob/master/resume.pdf][resume]] written in Latex.
    [[./public/emacs-resume.png]]

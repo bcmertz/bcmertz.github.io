@@ -6,7 +6,7 @@ layout: default
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-02-10 Wed 18:26 -->
+<!-- 2021-02-10 Wed 18:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portfolio</title>
@@ -246,40 +246,11 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Portfolio</h1>
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org2428d45">1. Indoor Automated Garden</a></li>
-<li><a href="#org934d091">2. Linux RICE (Github)</a>
-<ul>
-<li><a href="#org4374573">2.1. Overview</a></li>
-</ul>
-</li>
-<li><a href="#orge90c7c7">3. Open Source Coding Projects</a>
-<ul>
-<li><a href="#orge3611e4">3.1. Search Within Video (Github Website)</a></li>
-<li><a href="#orgf4c976a">3.2. Ray Tracer (Github)</a></li>
-<li><a href="#orgca6717d">3.3. Steganographic Encoder (Github)</a></li>
-</ul>
-</li>
-<li><a href="#org3e08fcb">4. Emacs Build (Github)</a>
-<ul>
-<li><a href="#org91322c0">4.1. Measuring startup time</a></li>
-<li><a href="#org00da079">4.2. Email</a></li>
-<li><a href="#org5aa72c1">4.3. Emacs as window manager</a></li>
-<li><a href="#org1d7cf0f">4.4. Org Mode</a></li>
-<li><a href="#orgae21736">4.5. Latex dev environment and resume</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org2428d45" class="outline-2">
-<h2 id="org2428d45"><span class="section-number-2">1</span> Indoor Automated Garden</h2>
+<div id="outline-container-orga3680a3" class="outline-2">
+<h2 id="orga3680a3"><span class="section-number-2">1</span> Indoor Automated Garden</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-In 2018 after completing the Recurse center I moved to the Bronx to help a friend keep her childhood apartment in her name. I have alwayds wanted to have a garden but I needed to reside in the city for my transgender services at Mount Sinai. So I brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
+In 2018 after completing the Recurse center I moved to the Bronx to help a friend keep her childhood apartment in her name. I have always wanted to have a garden but I needed to reside in the city for my transgender services at Mount Sinai. So I brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
 </p>
 
 <p>
@@ -288,13 +259,13 @@ My garden started humbly with some led grow lights and two little ghost pepper p
 </p>
 
 <p>
-Soon I added in an arduino controlled relay (in the box) to turn the lights on and off at set times each day. The program controlling it was simply doing a delay() for 12 hours. Not the most robust system, and it reset the program timer anytime the power reset, which was frequent with storms and sloppy cord management :)
+Soon I added in an Arduino controlled relay (in the box) to turn the lights on and off at set times each day. The program controlling it was simply doing a delay() for 12 hours. Not the most robust system, and it reset the program timer anytime the power reset, which was frequent with storms and sloppy cord management :)
 <img src="./public/automatedlights.JPG" alt="automatedlights.JPG" />
 </p>
 
 
 <p>
-A bell pepper coming in! By this point I added in a rtc<sub>ds1307</sub> real time clock to keep a battery powered time store that wouldn't reset in the case of power failures as the simple arduino program I wrote would.
+A bell pepper coming in! By this point I added in a rtc<sub>ds1307</sub> real time clock to keep a battery powered time store that wouldn't reset in the case of power failures as the simple Arduino program I wrote would.
 <img src="./public/bellpepper.JPG" alt="bellpepper.JPG" />
 </p>
 
@@ -354,7 +325,7 @@ Here is the janky c code I settled on :)
 </div>
 
 <p>
-Next I added in gravity fed drip irrigation, using an old paint bucket and a step drill bit I fit a hose connector to the bucket. This proved to be leaky and was eventually replaced with a proper gasget and valve. Water is fed into the bucket, then goes down main line then enters the drip line and leaves the emitters at 0.5 Gal / hour.
+Next I added in gravity fed drip irrigation, using an old paint bucket and a step drill bit I fit a hose connector to the bucket. This proved to be leaky and was eventually replaced with a proper gasket and valve. Water is fed into the bucket, then goes down main line then enters the drip line and leaves the emitters at 0.5 Gal / hour.
 <img src="./public/constructingwatering1.JPG" alt="constructingwatering1.JPG" />
 </p>
 
@@ -364,28 +335,28 @@ Pictured are my two black mulberry cuttings which sent out roots, and the blue d
 </p>
 
 <p>
-Here is my white mulberry grown from seeds taken on my street, white mullberries are grown natively throughout the middle east but are new here!
+Here is my white mulberry grown from seeds taken on my street, white mulberries are grown natively throughout the middle east but are new here!
 <img src="./public/mulberry.JPG" alt="mulberry.JPG" />
 </p>
 </div>
 </div>
 
-<div id="outline-container-org934d091" class="outline-2">
-<h2 id="org934d091"><span class="section-number-2">2</span> Linux RICE <a href="https://github.com/bcmertz/dotfiles">(Github)</a></h2>
+<div id="outline-container-orgcb9be32" class="outline-2">
+<h2 id="orgcb9be32"><span class="section-number-2">2</span> Linux RICE <a href="https://github.com/bcmertz/dotfiles">(Github)</a></h2>
 <div class="outline-text-2" id="text-2">
 <p>
-I run Arch Linux with a completely customized userspace that has tight integration and command keystroke parity between emacs, terminal, and various unix utilities. Pictured below is my i3 wm setup
+I run Arch Linux with a completely customized user-space that has tight integration and command keystroke parity between Emacs, terminal, and various Unix utilities. Pictured below is my i3 WM setup
 <img src="./public/rice.png" alt="rice.png" />
 </p>
 </div>
-<div id="outline-container-org4374573" class="outline-3">
-<h3 id="org4374573"><span class="section-number-3">2.1</span> Overview</h3>
+<div id="outline-container-org6264b62" class="outline-3">
+<h3 id="org6264b62"><span class="section-number-3">2.1</span> Overview</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 These are some interesting scripts I've written to make my desktop tick, and sometimes fly:
 </p>
 <ul class="org-ul">
-<li><a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/dmenu/choose_keyboard">Internationalization</a> - this script queries the installed keyboards and sets a toggle-able keyboard with the default en keyboard, and <a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/dmenu/farsi_text">this</a> script allows the user to search by phoenetic sound to see which farsi letters represent that sound, and the keyboard mappings which type that character (useful when you only have an english keyboard as I do). This makes typing farsi on an english keyboard introspectable and efficient.</li>
+<li><a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/dmenu/choose_keyboard">Internationalization</a> - this script queries the installed keyboards and sets a toggle-able keyboard with the default en keyboard, and <a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/dmenu/farsi_text">this</a> script allows the user to search by phonetic sound to see which Farsi letters represent that sound, and the keyboard mappings which type that character (useful when you only have an English keyboard as I do). This makes typing Farsi on an English keyboard introspect-able and efficient.</li>
 </ul>
 
 <div class="figure">
@@ -396,7 +367,7 @@ These are some interesting scripts I've written to make my desktop tick, and som
 <li><a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/wmsel">Simple Display Manger</a> I wrote in bash, which is used <a href="https://github.com/bcmertz/dotfiles/blob/master/.profile#L26-L36">here</a> to choose the window manager on login. The second part of this process is done <a href="https://github.com/bcmertz/dotfiles/blob/master/.xinitrc#L31-L44">here</a>, where we take the name of window manager and get its startup command from <code>/usr/share/xsessions/$session.desktop</code></li>
 <li><a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/cron/setbg">Set Background</a> - this script is run as a cron job to change the wallpaper every hour to a random wallpaper. If invoked manually you can pass the -s flag to keep the wallpaper the same. Additionally you can pass a wallpaper name to choose specifically which wallpaper is desired.</li>
 <li><a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/setup/backuppass">Pzasswords &amp; GPG Keys</a> - this script backs up encrypted passwords and GPG keys and <a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/setup/setuppass">this script</a> clones them to a new/broken machine</li>
-<li><a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/killport">Kill Port utility</a> - to kill whatever process is runnign on a specific port. Very useful when node bugs out</li>
+<li><a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/killport">Kill Port utility</a> - to kill whatever process is running on a specific port. Very useful when node bugs out</li>
 <li><a href="https://github.com/bcmertz/dotfiles/blob/master/.local/bin/git_alias">Git alias</a> - this utility allows me to use git commands in my home folder as it is version controlled as a bare git repository. This means all my dotfiles are always version controlled without any fancy scripts or tools, just git</li>
 <li><a href="https://github.com/bcmertz/dotfiles/blob/master/.xprofile">Startup applications</a>: this runs when Xorg starts up and checks to see which DE/WM is being used and starts the appropriate applications</li>
 </ul>
@@ -404,18 +375,18 @@ These are some interesting scripts I've written to make my desktop tick, and som
 </div>
 </div>
 
-<div id="outline-container-orge90c7c7" class="outline-2">
-<h2 id="orge90c7c7"><span class="section-number-2">3</span> Open Source Coding Projects</h2>
+<div id="outline-container-org0879d44" class="outline-2">
+<h2 id="org0879d44"><span class="section-number-2">3</span> Open Source Coding Projects</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-Open source is incredibly important to me, and I make every piece of software I write open souce and freely liscenced. Below are three of my favorite projects I've written over the last few years.
+Open source is incredibly important to me, and I make every piece of software I write open source and freely licensed. Below are three of my favorite projects I've written over the last few years.
 </p>
 </div>
-<div id="outline-container-orge3611e4" class="outline-3">
-<h3 id="orge3611e4"><span class="section-number-3">3.1</span> Search Within Video (<a href="https://github.com/bcmertz/videosearch">Github</a> <a href="http://www.searchwithinvideo.com/">Website</a>)</h3>
+<div id="outline-container-org0dcc5e6" class="outline-3">
+<h3 id="org0dcc5e6"><span class="section-number-3">3.1</span> Search Within Video (<a href="https://github.com/bcmertz/videosearch">Github</a> <a href="http://www.searchwithinvideo.com/">Website</a>)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
-Search Within Video allows you to upload a video or provide a youtube url that is downloaded and analyzed using OpenCV to see which frames are statistically most unique based off of mean squared error comparisons to the previous frame. These unique frames are then uploaded to an open source image classifier, and the results are returned to the user in the form of a searchable video. The user can search for an object such as "dog" and the video will load the timestamp of any dog occurence.
+Search Within Video allows you to upload a video or provide a Youtube URL that is downloaded and analyzed using OpenCV to see which frames are statistically most unique based off of mean squared error comparisons to the previous frame. These unique frames are then uploaded to an open source image classifier, and the results are returned to the user in the form of a searchable video. The user can search for an object such as "dog" and the video will load the timestamp of any dog occurrence.
 </p>
 
 <p>
@@ -423,12 +394,12 @@ Search Within Video allows you to upload a video or provide a youtube url that i
 </p>
 
 <p>
-This project has a microservice architecture and runs the video parser and image classifier on a python backend and the webpage off a node server.
+This project has a micro-service architecture and runs the video parser and image classifier on a python back-end and the web page off a node server.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf4c976a" class="outline-3">
-<h3 id="orgf4c976a"><span class="section-number-3">3.2</span> Ray Tracer (<a href="https://github.com/bcmertz/ray-tracer">Github</a>)</h3>
+<div id="outline-container-org530758b" class="outline-3">
+<h3 id="org530758b"><span class="section-number-3">3.2</span> Ray Tracer (<a href="https://github.com/bcmertz/ray-tracer">Github</a>)</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Pictured below is the sample output from my ray tracer. It can render shapes at different depths, with variable lighting and backgrounds. Shadows don't work properly but there should be support soon.
@@ -436,8 +407,8 @@ Pictured below is the sample output from my ray tracer. It can render shapes at 
 </p>
 </div>
 </div>
-<div id="outline-container-orgca6717d" class="outline-3">
-<h3 id="orgca6717d"><span class="section-number-3">3.3</span> Steganographic Encoder (<a href="https://github.com/bcmertz/steganographic-encoder">Github</a>)</h3>
+<div id="outline-container-orga74482e" class="outline-3">
+<h3 id="orga74482e"><span class="section-number-3">3.3</span> Steganographic Encoder (<a href="https://github.com/bcmertz/steganographic-encoder">Github</a>)</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 This project somewhat sloppily hides messages and decodes them from pictures using least significant bit manipulation.
@@ -445,19 +416,19 @@ This project somewhat sloppily hides messages and decodes them from pictures usi
 </div>
 </div>
 </div>
-<div id="outline-container-org3e08fcb" class="outline-2">
-<h2 id="org3e08fcb"><span class="section-number-2">4</span> Emacs Build (<a href="https://github.com/bcmertz/dotfiles/tree/master/.emacs.d">Github</a>)</h2>
+<div id="outline-container-org835ec3f" class="outline-2">
+<h2 id="org835ec3f"><span class="section-number-2">4</span> Emacs Build (<a href="https://github.com/bcmertz/dotfiles/tree/master/.emacs.d">Github</a>)</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, autocompletion, compilation, and many tweaks that make windowing inside of emacs work like it does in my window manager of choice i3. My custom build features 8 language configurations and 14 general purpose modules that configure everything from git support to editing
+Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, auto-completion, compilation, and many tweaks that make windowing inside of Emacs work like it does in my window manager of choice i3. My custom build features 8 language configurations and 14 general purpose modules that configure everything from git support to editing
 <img src="./public/emacs-org-mode.png" alt="emacs-org-mode.png" />
 </p>
 </div>
-<div id="outline-container-org91322c0" class="outline-3">
-<h3 id="org91322c0"><span class="section-number-3">4.1</span> Measuring startup time</h3>
+<div id="outline-container-orgd2851c7" class="outline-3">
+<h3 id="orgd2851c7"><span class="section-number-3">4.1</span> Measuring startup time</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
-Startup performance of my custom build is monitored very closely. <a href="https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/init.el#L22-L27">Here</a> I implement a module timer to track perfomance / load time of each custom module.
+Startup performance of my custom build is monitored very closely. <a href="https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/init.el#L22-L27">Here</a> I implement a module timer to track performance / load time of each custom module.
 </p>
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">   <span style="color: #5C6370; font-style: italic;">;; </span><span style="color: #5C6370; font-style: italic;">debug startup performance / load time using (measure-time(load "custom-module.el"))</span>
@@ -470,20 +441,20 @@ Startup performance of my custom build is monitored very closely. <a href="https
 </div>
 </div>
 </div>
-<div id="outline-container-org00da079" class="outline-3">
-<h3 id="org00da079"><span class="section-number-3">4.2</span> Email</h3>
+<div id="outline-container-org730e1c5" class="outline-3">
+<h3 id="org730e1c5"><span class="section-number-3">4.2</span> Email</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
-I setup emacs as an email client using <a href="https://github.com/cemkeylan/mu-wizard/">https://github.com/cemkeylan/mu-wizard/</a> to set up mu4e! I am still amazed this works.
+I setup Emacs as an email client using <a href="https://github.com/cemkeylan/mu-wizard/">https://github.com/cemkeylan/mu-wizard/</a> to set up mu4e! I am still amazed this works.
 <img src="./public/mu4e.png" alt="mu4e.png" />
 </p>
 </div>
 </div>
-<div id="outline-container-org5aa72c1" class="outline-3">
-<h3 id="org5aa72c1"><span class="section-number-3">4.3</span> Emacs as window manager</h3>
+<div id="outline-container-orge8fa8c6" class="outline-3">
+<h3 id="orge8fa8c6"><span class="section-number-3">4.3</span> Emacs as window manager</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
-Emacs is very nearly an entire OS in it's own right. I use it as my window manager while programming for a distraction free environment tightly configured with multi-language integration. Here we load the emacs x window manager (exwm) config:
+Emacs is very nearly an entire OS in it's own right. I use it as my window manager while programming for a distraction free environment tightly configured with multi-language integration. Here we load the Emacs x window manager (EXWM) config:
 </p>
 <div class="org-src-container">
 <pre class="src src-emacs-lisp"><span style="color: #5C6370; font-style: italic;">;; </span><span style="color: #5C6370; font-style: italic;">emacs as window manager</span>
@@ -499,23 +470,23 @@ Emacs is very nearly an entire OS in it's own right. I use it as my window manag
 </div>
 </div>
 
-<div id="outline-container-org1d7cf0f" class="outline-3">
-<h3 id="org1d7cf0f"><span class="section-number-3">4.4</span> Org Mode</h3>
+<div id="outline-container-org2dae25a" class="outline-3">
+<h3 id="org2dae25a"><span class="section-number-3">4.4</span> Org Mode</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
-This portfolio is written in an org document and exported to html, to see the original org text go <a href="https://github.com/bcmertz/bcmertz.github.io/blob/master/index.org">here</a>
+This portfolio is written in an org document and exported to HTML, to see the original org text go <a href="https://github.com/bcmertz/bcmertz.github.io/blob/master/index.org">here</a>
 </p>
 
 <p>
-I use org mode to track my list of todo items, and have built in functionality like reviewing github pull requests from inside of emacs/org-mode as configured <a href="https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-org.el#L11-L18">here</a>
+I use org mode to track my list of todo items, and have built in functionality like reviewing Github pull requests from inside of Emacs/org-mode as configured <a href="https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-org.el#L11-L18">here</a>
 </p>
 </div>
 </div>
-<div id="outline-container-orgae21736" class="outline-3">
-<h3 id="orgae21736"><span class="section-number-3">4.5</span> Latex dev environment and resume</h3>
+<div id="outline-container-org98a358e" class="outline-3">
+<h3 id="org98a358e"><span class="section-number-3">4.5</span> Latex dev environment and resume</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
-Within emacs I have setup a dev environment for editing <a href="https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-latex.el">latex</a> with automatic compilation to pdf. Checkout my <a href="https://github.com/bcmertz/resume/blob/master/resume.pdf">resume</a> written in Latex.
+Within Emacs I have setup a dev environment for editing <a href="https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-latex.el">latex</a> with automatic compilation to PDF. Checkout my <a href="https://github.com/bcmertz/resume/blob/master/resume.pdf">resume</a> written in Latex.
 <img src="./public/emacs-resume.png" alt="emacs-resume.png" />
 </p>
 </div>
@@ -524,7 +495,7 @@ Within emacs I have setup a dev environment for editing <a href="https://github.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Bennett Mertz</p>
-<p class="date">Created: 2021-02-10 Wed 18:26</p>
+<p class="date">Created: 2021-02-10 Wed 18:37</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
