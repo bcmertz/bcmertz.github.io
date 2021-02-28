@@ -6,7 +6,7 @@ layout: default
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-02-10 Wed 18:37 -->
+<!-- 2021-02-28 Sun 16:06 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portfolio</title>
@@ -246,8 +246,37 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Portfolio</h1>
-<div id="outline-container-orga3680a3" class="outline-2">
-<h2 id="orga3680a3"><span class="section-number-2">1</span> Indoor Automated Garden</h2>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge7c126f">1. Indoor Automated Garden</a></li>
+<li><a href="#org2544ec4">2. Linux RICE (Github)</a>
+<ul>
+<li><a href="#org2590f1a">2.1. Overview</a></li>
+</ul>
+</li>
+<li><a href="#orgcccd8e7">3. Open Source Coding Projects</a>
+<ul>
+<li><a href="#org60ba6a2">3.1. Search Within Video (Github Website)</a></li>
+<li><a href="#org62435ec">3.2. Ray Tracer (Github)</a></li>
+<li><a href="#org8291968">3.3. Steganographic Encoder (Github)</a></li>
+</ul>
+</li>
+<li><a href="#org4121eb3">4. Emacs Build (Github)</a>
+<ul>
+<li><a href="#org9516b22">4.1. Measuring startup time</a></li>
+<li><a href="#org4f4f272">4.2. Email</a></li>
+<li><a href="#orgf2736a0">4.3. Emacs as window manager</a></li>
+<li><a href="#org2096d83">4.4. Org Mode</a></li>
+<li><a href="#org69f1a23">4.5. Latex dev environment and resume</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge7c126f" class="outline-2">
+<h2 id="orge7c126f"><span class="section-number-2">1</span> Indoor Automated Garden</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In 2018 after completing the Recurse center I moved to the Bronx to help a friend keep her childhood apartment in her name. I have always wanted to have a garden but I needed to reside in the city for my transgender services at Mount Sinai. So I brainstormed ways to create the garden of my dreams inside a northern exposure apartment in the middle of a food desert and green desert.
@@ -273,51 +302,51 @@ A bell pepper coming in! By this point I added in a rtc<sub>ds1307</sub> real ti
 Here is the janky c code I settled on :)
 </p>
 <div class="org-src-container">
-<pre class="src src-c"><span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">Date and time functions using a DS1307 RTC connected via I2C and Wire lib</span>
-<span style="color: #828997;">#include</span> <span style="color: #98C379;">&lt;Wire.h&gt;</span>
-<span style="color: #828997;">#include</span> <span style="color: #98C379;">"RTClib.h"</span>
-<span style="color: #E5C07B;">RTC_DS1307</span> <span style="color: #E06C75;">rtc</span>;
+<pre class="src src-c"><span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">Date and time functions using a DS1307 RTC connected via I2C and Wire lib</span>
+<span style="color: #b0c4de;">#include</span> <span style="color: #ffa07a;">&lt;Wire.h&gt;</span>
+<span style="color: #b0c4de;">#include</span> <span style="color: #ffa07a;">"RTClib.h"</span>
+<span style="color: #98fb98;">RTC_DS1307</span> <span style="color: #eedd82;">rtc</span>;
 
-<span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">constants won't change. Used here to set a pin number:</span>
-<span style="color: #C678DD;">const</span> <span style="color: #E5C07B;">int</span> <span style="color: #E06C75;">relay</span> =  2;
+<span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">constants won't change. Used here to set a pin number:</span>
+<span style="color: #00ffff;">const</span> <span style="color: #98fb98;">int</span> <span style="color: #eedd82;">relay</span> =  2;
 
-<span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">start light off</span>
-<span style="color: #E5C07B;">int</span> <span style="color: #E06C75;">ledState</span> = HIGH;
+<span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">start light off</span>
+<span style="color: #98fb98;">int</span> <span style="color: #eedd82;">ledState</span> = HIGH;
 
-<span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">t1 on</span>
-<span style="color: #E5C07B;">int</span> <span style="color: #E06C75;">h1</span> = 7;
-<span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">t2 off</span>
-<span style="color: #E5C07B;">int</span> <span style="color: #E06C75;">h2</span> = 22;
+<span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">t1 on</span>
+<span style="color: #98fb98;">int</span> <span style="color: #eedd82;">h1</span> = 7;
+<span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">t2 off</span>
+<span style="color: #98fb98;">int</span> <span style="color: #eedd82;">h2</span> = 22;
 
-<span style="color: #E5C07B;">void</span> <span style="color: #61AFEF;">setup</span> () {
-  <span style="color: #C678DD;">while</span> (<span style="color: #56B6C2; font-weight: bold;">!</span>Serial); <span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">for Leonardo/Micro/Zero</span>
+<span style="color: #98fb98;">void</span> <span style="color: #87cefa;">setup</span> () {
+  <span style="color: #00ffff;">while</span> (!Serial); <span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">for Leonardo/Micro/Zero</span>
   Serial.begin(9600);
   delay(3000);
-  <span style="color: #C678DD;">if</span> (<span style="color: #56B6C2; font-weight: bold;">!</span> rtc.begin()) {
-    Serial.println(<span style="color: #98C379;">"Couldn't find RTC"</span>);
-    <span style="color: #C678DD;">while</span> (1);
+  <span style="color: #00ffff;">if</span> (! rtc.begin()) {
+    Serial.println(<span style="color: #ffa07a;">"Couldn't find RTC"</span>);
+    <span style="color: #00ffff;">while</span> (1);
   }
-  <span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">following line sets the RTC to the date &amp; time this sketch was compiled</span>
-  <span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">uncomment to set new date time</span>
-  <span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));</span>
+  <span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">following line sets the RTC to the date &amp; time this sketch was compiled</span>
+  <span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">uncomment to set new date time</span>
+  <span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));</span>
 
   digitalWrite(relay, LOW);
   pinMode(relay, OUTPUT);
 }
-<span style="color: #E5C07B;">void</span> <span style="color: #61AFEF;">loop</span> () {
-  <span style="color: #E5C07B;">DateTime</span> <span style="color: #E06C75;">now</span> = rtc.now();
+<span style="color: #98fb98;">void</span> <span style="color: #87cefa;">loop</span> () {
+  <span style="color: #98fb98;">DateTime</span> <span style="color: #eedd82;">now</span> = rtc.now();
   Serial.println(now.hour());
   Serial.println(now.minute());
-  Serial.println(ledState ? <span style="color: #98C379;">"HIGH"</span> : <span style="color: #98C379;">"LOW"</span>);
-  <span style="color: #C678DD;">if</span> (now.hour() &gt;= h1 &amp;&amp; ledState == HIGH &amp;&amp; now.hour() &lt; h2) {
-    <span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">if the LED is off turn it on</span>
-    Serial.println(<span style="color: #98C379;">"Switching light on"</span>);
+  Serial.println(ledState ? <span style="color: #ffa07a;">"HIGH"</span> : <span style="color: #ffa07a;">"LOW"</span>);
+  <span style="color: #00ffff;">if</span> (now.hour() &gt;= h1 &amp;&amp; ledState == HIGH &amp;&amp; now.hour() &lt; h2) {
+    <span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">if the LED is off turn it on</span>
+    Serial.println(<span style="color: #ffa07a;">"Switching light on"</span>);
     ledState = LOW;
-  } <span style="color: #C678DD;">else</span> <span style="color: #C678DD;">if</span> ((now.hour() &gt;= h2 || now.hour() &lt; h1) &amp;&amp; ledState == LOW) {
-    Serial.println(<span style="color: #98C379;">"Switching light off"</span>);
+  } <span style="color: #00ffff;">else</span> <span style="color: #00ffff;">if</span> ((now.hour() &gt;= h2 || now.hour() &lt; h1) &amp;&amp; ledState == LOW) {
+    Serial.println(<span style="color: #ffa07a;">"Switching light off"</span>);
     ledState = HIGH;
   }
-  <span style="color: #5C6370; font-style: italic;">// </span><span style="color: #5C6370; font-style: italic;">set the LED with the ledState of the variable:</span>
+  <span style="color: #ff7f24;">// </span><span style="color: #ff7f24;">set the LED with the ledState of the variable:</span>
   digitalWrite(relay, ledState);
   delay(3000);
 }
@@ -341,16 +370,16 @@ Here is my white mulberry grown from seeds taken on my street, white mulberries 
 </div>
 </div>
 
-<div id="outline-container-orgcb9be32" class="outline-2">
-<h2 id="orgcb9be32"><span class="section-number-2">2</span> Linux RICE <a href="https://github.com/bcmertz/dotfiles">(Github)</a></h2>
+<div id="outline-container-org2544ec4" class="outline-2">
+<h2 id="org2544ec4"><span class="section-number-2">2</span> Linux RICE <a href="https://github.com/bcmertz/dotfiles">(Github)</a></h2>
 <div class="outline-text-2" id="text-2">
 <p>
 I run Arch Linux with a completely customized user-space that has tight integration and command keystroke parity between Emacs, terminal, and various Unix utilities. Pictured below is my i3 WM setup
 <img src="./public/rice.png" alt="rice.png" />
 </p>
 </div>
-<div id="outline-container-org6264b62" class="outline-3">
-<h3 id="org6264b62"><span class="section-number-3">2.1</span> Overview</h3>
+<div id="outline-container-org2590f1a" class="outline-3">
+<h3 id="org2590f1a"><span class="section-number-3">2.1</span> Overview</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 These are some interesting scripts I've written to make my desktop tick, and sometimes fly:
@@ -375,15 +404,15 @@ These are some interesting scripts I've written to make my desktop tick, and som
 </div>
 </div>
 
-<div id="outline-container-org0879d44" class="outline-2">
-<h2 id="org0879d44"><span class="section-number-2">3</span> Open Source Coding Projects</h2>
+<div id="outline-container-orgcccd8e7" class="outline-2">
+<h2 id="orgcccd8e7"><span class="section-number-2">3</span> Open Source Coding Projects</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Open source is incredibly important to me, and I make every piece of software I write open source and freely licensed. Below are three of my favorite projects I've written over the last few years.
 </p>
 </div>
-<div id="outline-container-org0dcc5e6" class="outline-3">
-<h3 id="org0dcc5e6"><span class="section-number-3">3.1</span> Search Within Video (<a href="https://github.com/bcmertz/videosearch">Github</a> <a href="http://www.searchwithinvideo.com/">Website</a>)</h3>
+<div id="outline-container-org60ba6a2" class="outline-3">
+<h3 id="org60ba6a2"><span class="section-number-3">3.1</span> Search Within Video (<a href="https://github.com/bcmertz/videosearch">Github</a> <a href="http://www.searchwithinvideo.com/">Website</a>)</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Search Within Video allows you to upload a video or provide a Youtube URL that is downloaded and analyzed using OpenCV to see which frames are statistically most unique based off of mean squared error comparisons to the previous frame. These unique frames are then uploaded to an open source image classifier, and the results are returned to the user in the form of a searchable video. The user can search for an object such as "dog" and the video will load the timestamp of any dog occurrence.
@@ -398,8 +427,8 @@ This project has a micro-service architecture and runs the video parser and imag
 </p>
 </div>
 </div>
-<div id="outline-container-org530758b" class="outline-3">
-<h3 id="org530758b"><span class="section-number-3">3.2</span> Ray Tracer (<a href="https://github.com/bcmertz/ray-tracer">Github</a>)</h3>
+<div id="outline-container-org62435ec" class="outline-3">
+<h3 id="org62435ec"><span class="section-number-3">3.2</span> Ray Tracer (<a href="https://github.com/bcmertz/ray-tracer">Github</a>)</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Pictured below is the sample output from my ray tracer. It can render shapes at different depths, with variable lighting and backgrounds. Shadows don't work properly but there should be support soon.
@@ -407,8 +436,8 @@ Pictured below is the sample output from my ray tracer. It can render shapes at 
 </p>
 </div>
 </div>
-<div id="outline-container-orga74482e" class="outline-3">
-<h3 id="orga74482e"><span class="section-number-3">3.3</span> Steganographic Encoder (<a href="https://github.com/bcmertz/steganographic-encoder">Github</a>)</h3>
+<div id="outline-container-org8291968" class="outline-3">
+<h3 id="org8291968"><span class="section-number-3">3.3</span> Steganographic Encoder (<a href="https://github.com/bcmertz/steganographic-encoder">Github</a>)</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 This project somewhat sloppily hides messages and decodes them from pictures using least significant bit manipulation.
@@ -416,33 +445,33 @@ This project somewhat sloppily hides messages and decodes them from pictures usi
 </div>
 </div>
 </div>
-<div id="outline-container-org835ec3f" class="outline-2">
-<h2 id="org835ec3f"><span class="section-number-2">4</span> Emacs Build (<a href="https://github.com/bcmertz/dotfiles/tree/master/.emacs.d">Github</a>)</h2>
+<div id="outline-container-org4121eb3" class="outline-2">
+<h2 id="org4121eb3"><span class="section-number-2">4</span> Emacs Build (<a href="https://github.com/bcmertz/dotfiles/tree/master/.emacs.d">Github</a>)</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Emacs is the ideal extensible editor for all types of plain text, including code and latex. My custom build includes support for many useful tools including vim emulation, email, auto-completion, compilation, and many tweaks that make windowing inside of Emacs work like it does in my window manager of choice i3. My custom build features 8 language configurations and 14 general purpose modules that configure everything from git support to editing
 <img src="./public/emacs-org-mode.png" alt="emacs-org-mode.png" />
 </p>
 </div>
-<div id="outline-container-orgd2851c7" class="outline-3">
-<h3 id="orgd2851c7"><span class="section-number-3">4.1</span> Measuring startup time</h3>
+<div id="outline-container-org9516b22" class="outline-3">
+<h3 id="org9516b22"><span class="section-number-3">4.1</span> Measuring startup time</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Startup performance of my custom build is monitored very closely. <a href="https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/init.el#L22-L27">Here</a> I implement a module timer to track performance / load time of each custom module.
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">   <span style="color: #5C6370; font-style: italic;">;; </span><span style="color: #5C6370; font-style: italic;">debug startup performance / load time using (measure-time(load "custom-module.el"))</span>
-(<span style="color: #C678DD;">defmacro</span> <span style="color: #61AFEF;">measure-time</span> (<span style="color: #E5C07B;">&amp;rest</span> body)
-  <span style="color: #98C379;">"Measure the time it takes to evaluate BODY."</span>
-  `(<span style="color: #C678DD;">let</span> ((time (current-time)))
+<pre class="src src-emacs-lisp">   <span style="color: #ff7f24;">;; </span><span style="color: #ff7f24;">debug startup performance / load time using (measure-time(load "custom-module.el"))</span>
+(<span style="color: #00ffff;">defmacro</span> <span style="color: #87cefa;">measure-time</span> (<span style="color: #98fb98;">&amp;rest</span> body)
+  <span style="color: #ffa07a;">"Measure the time it takes to evaluate BODY."</span>
+  `(<span style="color: #00ffff;">let</span> ((time (current-time)))
      ,@body
-     (message <span style="color: #98C379;">"%.06f"</span> (float-time (time-since time)))))
+     (message <span style="color: #ffa07a;">"%.06f"</span> (float-time (time-since time)))))
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org730e1c5" class="outline-3">
-<h3 id="org730e1c5"><span class="section-number-3">4.2</span> Email</h3>
+<div id="outline-container-org4f4f272" class="outline-3">
+<h3 id="org4f4f272"><span class="section-number-3">4.2</span> Email</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 I setup Emacs as an email client using <a href="https://github.com/cemkeylan/mu-wizard/">https://github.com/cemkeylan/mu-wizard/</a> to set up mu4e! I am still amazed this works.
@@ -450,19 +479,19 @@ I setup Emacs as an email client using <a href="https://github.com/cemkeylan/mu-
 </p>
 </div>
 </div>
-<div id="outline-container-orge8fa8c6" class="outline-3">
-<h3 id="orge8fa8c6"><span class="section-number-3">4.3</span> Emacs as window manager</h3>
+<div id="outline-container-orgf2736a0" class="outline-3">
+<h3 id="orgf2736a0"><span class="section-number-3">4.3</span> Emacs as window manager</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Emacs is very nearly an entire OS in it's own right. I use it as my window manager while programming for a distraction free environment tightly configured with multi-language integration. Here we load the Emacs x window manager (EXWM) config:
 </p>
 <div class="org-src-container">
-<pre class="src src-emacs-lisp"><span style="color: #5C6370; font-style: italic;">;; </span><span style="color: #5C6370; font-style: italic;">emacs as window manager</span>
-(<span style="color: #C678DD;">setq</span> session (getenv <span style="color: #98C379;">"SESSION"</span>))
-(<span style="color: #C678DD;">if</span> (equal session <span style="color: #98C379;">"emacs"</span>)
-    (<span style="color: #C678DD;">progn</span>
-      (message <span style="color: #98C379;">"managing windows"</span>)
-      (load <span style="color: #98C379;">"custom-exwm-config.el"</span>)
+<pre class="src src-emacs-lisp"><span style="color: #ff7f24;">;; </span><span style="color: #ff7f24;">emacs as window manager</span>
+(<span style="color: #00ffff;">setq</span> session (getenv <span style="color: #ffa07a;">"SESSION"</span>))
+(<span style="color: #00ffff;">if</span> (equal session <span style="color: #ffa07a;">"emacs"</span>)
+    (<span style="color: #00ffff;">progn</span>
+      (message <span style="color: #ffa07a;">"managing windows"</span>)
+      (load <span style="color: #ffa07a;">"custom-exwm-config.el"</span>)
       )
   )
 </pre>
@@ -470,8 +499,8 @@ Emacs is very nearly an entire OS in it's own right. I use it as my window manag
 </div>
 </div>
 
-<div id="outline-container-org2dae25a" class="outline-3">
-<h3 id="org2dae25a"><span class="section-number-3">4.4</span> Org Mode</h3>
+<div id="outline-container-org2096d83" class="outline-3">
+<h3 id="org2096d83"><span class="section-number-3">4.4</span> Org Mode</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 This portfolio is written in an org document and exported to HTML, to see the original org text go <a href="https://github.com/bcmertz/bcmertz.github.io/blob/master/index.org">here</a>
@@ -482,8 +511,8 @@ I use org mode to track my list of todo items, and have built in functionality l
 </p>
 </div>
 </div>
-<div id="outline-container-org98a358e" class="outline-3">
-<h3 id="org98a358e"><span class="section-number-3">4.5</span> Latex dev environment and resume</h3>
+<div id="outline-container-org69f1a23" class="outline-3">
+<h3 id="org69f1a23"><span class="section-number-3">4.5</span> Latex dev environment and resume</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 Within Emacs I have setup a dev environment for editing <a href="https://github.com/bcmertz/dotfiles/blob/master/.emacs.d/lisp/languages/custom-latex.el">latex</a> with automatic compilation to PDF. Checkout my <a href="https://github.com/bcmertz/resume/blob/master/resume.pdf">resume</a> written in Latex.
@@ -495,7 +524,7 @@ Within Emacs I have setup a dev environment for editing <a href="https://github.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Bennett Mertz</p>
-<p class="date">Created: 2021-02-10 Wed 18:37</p>
+<p class="date">Created: 2021-02-28 Sun 16:06</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
